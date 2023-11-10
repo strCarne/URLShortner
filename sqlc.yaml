@@ -1,0 +1,8 @@
+version: "2"
+sql:
+  - schema: "internal/storage/postgresql/migrations/schema"
+    queries: "internal/storage/postgresql/sqlc/queries"
+    engine: "postgresql"
+    gen:
+      go:
+        out: "internal/storage/postgresql/sqlc/generated"
