@@ -1,12 +1,11 @@
 package main
 
 import (
-	"fmt"
-
 	"github.com/strCarne/URLShortner/internal/config"
+	"github.com/strCarne/URLShortner/internal/logger"
 )
 
 func main() {
 	cfg := config.MustLoad()
-	fmt.Println(cfg)
+	logger := logger.SetUp(cfg.Env)
 }
