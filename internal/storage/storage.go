@@ -8,4 +8,5 @@ var (
 )
 
 type Storage interface {
+	SaveURL(string, string) error
 }

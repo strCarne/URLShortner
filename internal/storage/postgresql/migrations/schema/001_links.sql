@@ -1,9 +1,12 @@
 -- +goose Up
 
-CREATE TABLE links (
-    id UUID NOT NULL PRIMARY KEY
+CREATE TABLE urls (
+    id UUID NOT NULL PRIMARY KEY,
+    alias TEXT NOT NULL UNIQUE,
+    url TEXT NOT NULL
 );
+CREATE INDEX IF NOT EXISTS idx_alias on urls(alias);
 
 -- +goose Down
 
-DROP TABLE links;
+DROP TABLE urls;
