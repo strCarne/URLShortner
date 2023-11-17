@@ -9,7 +9,7 @@ import (
 
 	_ "github.com/lib/pq"
 	"github.com/strCarne/URLShortner/internal/storage/postgresql/sqlc/generated"
-	"github.com/strCarne/URLShortner/wraperr"
+	"github.com/strCarne/URLShortner/pkg/wraperr"
 )
 
 type Storage struct {

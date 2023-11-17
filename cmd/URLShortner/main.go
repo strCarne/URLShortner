@@ -28,8 +28,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	err = storage.SaveURL("htpps://google.com", "google")
-	if err != nil {
-		logger.Error("didn't saved the link", sl.Err(err))
-	}
+	res, err := storage.GetURL("google")
+	logger.Info(res)
 }
